@@ -1,0 +1,72 @@
+.link {
+    --color: var(--clr-normal, black);
+    --height: 1px;
+    position: relative;
+    color: var(--color);
+    text-decoration: none;
+    transition: padding .3s;
+}
+
+.link.bold {
+    --height: 2px;
+    font-weight: bold;
+}
+
+.link.disabled {
+    color: var(--clr-disabled, lightslategray);
+    cursor: not-allowed;
+}
+
+/*
+    Link Style #1
+*/
+.link:not(.disabled).style-1 {
+    --color: var(--clr-primary, #0050FF);
+    color: var(--color);
+}
+
+/*
+    Link Style #2
+*/
+.link:not(.disabled).style-2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--height);
+    background-color: var(--color);
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+
+.link:not(.disabled).style-2:hover::after {
+    transform: scaleX(1)
+}
+
+/*
+    Link Style #3
+    Note: You probably want to avoid this style on smartphones.
+*/
+.link:not(.disabled).style-3:hover {
+    padding-left: 1em;
+}
+
+.link:not(.disabled).style-3::before {
+    content: '🡕';
+    position: absolute;
+    left: 1em;
+    opacity: 0;
+    transition: .3s;
+}
+
+.link:not(.disabled).style-3:hover::before {
+    left: 0;
+    opacity: 1;
+}
+
+.link:not(.disabled).style-3::after {
+    left: 1em;
+    width: calc(100% - 1em)
+}

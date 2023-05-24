@@ -1,0 +1,42 @@
+{
+  "name": "@flipeador/react-router",
+  "description": "Lightweight suspense-enabled routing library for ReactJS.",
+  "version": "1.0.1",
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "reactjs",
+    "suspense-enabled",
+    "router",
+    "react-router"
+  ],
+  "license": "gpl-3.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flipeador/react-router.git"
+  },
+  "author": "Flipeador (https://github.com/flipeador)",
+  "bugs": {
+    "url": "https://github.com/flipeador/react-router/issues"
+  },
+  "homepage": "https://github.com/flipeador/react-router#readme",
+  "type": "module",
+  "sourceType": "module",
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "eslint": "^8.41.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
